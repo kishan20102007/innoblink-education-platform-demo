@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #101828;
+  background: #f8fbff;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  font-family: Inter, Poppins, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.glass {
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  background: rgba(255, 255, 255, 0.74);
+  box-shadow: 0 18px 55px rgba(15, 74, 173, 0.13);
+  backdrop-filter: blur(18px);
+}
+
+.section-pad {
+  padding: 96px 0;
+}
+
+.container {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #03237F, #08a7a5, #21a66b, #ff7a1a);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.premium-grid {
+  background-image:
+    linear-gradient(rgba(15, 74, 173, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 74, 173, 0.08) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-4 focus:ring-brand-teal/25 focus:border-brand-teal;
+}
+
+@media (max-width: 768px) {
+  .section-pad {
+    padding: 68px 0;
+  }
+}
